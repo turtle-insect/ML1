@@ -8,6 +8,12 @@ namespace ML1
 {
 	class DataContext
 	{
+		public List<Charactor> Party { get; set; } = new List<Charactor>();
+		public DataContext()
+		{
+			Party.Add(new Charactor(0x00) { Name = "マリオ" });
+			Party.Add(new Charactor(0x28) { Name = "ルイージ" });
+		}
 		public uint PlayHour
 		{
 			get

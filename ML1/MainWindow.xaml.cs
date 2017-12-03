@@ -79,7 +79,7 @@ namespace ML1
 
 		private void MenuItemAbout_Click(object sender, RoutedEventArgs e)
 		{
-
+			new AboutWindow().ShowDialog();
 		}
 
 		private void ToolBarFileOpen_Click(object sender, RoutedEventArgs e)

@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
 namespace ML1
 {
 	class DataContext
 	{
 		public List<Charactor> Party { get; set; } = new List<Charactor>();
+		public ObservableCollection<Item> Items { get; set; } = new ObservableCollection<Item>();
 		public DataContext()
 		{
 			Party.Add(new Charactor(0x00) { Name = "マリオ" });
 			Party.Add(new Charactor(0x28) { Name = "ルイージ" });
+
+			foreach (var item in Info.Instance().Items)
+			{
+				Items.Add(new Item(item.Value + 0x54) { Name = item.Name });
+			}
 		}
 		public uint PlayHour
 		{

@@ -15,7 +15,7 @@ namespace ML1
 
 		private void LabelHP_MouseDown(object sender, MouseButtonEventArgs e)
 		{
-			System.Diagnostics.Process.Start("http://kamemushi.esy.es/");
+			System.Diagnostics.Process.Start("http://turtleinsect.php.xdomain.jp/");
 		}
 	}
 }
